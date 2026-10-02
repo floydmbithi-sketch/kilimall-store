@@ -1,0 +1,81 @@
+DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilimall Kenya | Online Shopping Marketplace</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for rich marketplace icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        kili: {
+                            orange: '#FF5722',
+                            red: '#E64A19',
+                            dark: '#121212',
+                            yellow: '#FFC107',
+                            light: '#FFF3E0'
+                        },
+                        binance: {
+                            yellow: '#F0B90B',
+                            dark: '#181A20'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; height: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 9999px; }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb { background: #334155; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .dark .glass-header {
+            background: rgba(15, 23, 42, 0.95);
+        }
+    </style>
+</head>
+<body class="bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans min-h-screen pb-16 md:pb-0 transition-colors duration-200">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-kili-orange via-red-600 to-kili-red text-white text-xs font-semibold py-1.5 px-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3 overflow-hidden whitespace-nowrap">
+                <span class="bg-white/20 px-2 py-0.5 rounded text-[10px] uppercase tracking-wider font-extrabold animate-pulse">Kilimall Express</span>
+                <span class="truncate">🔥 Super Deals: Free Delivery across Nairobi on orders over KSh 1,999!</span>
+            </div>
+            <div class="hidden sm:flex items-center space-x-4 text-xs">
+                <div class="flex items-center space-x-1 cursor-pointer hover:underline" onclick="toggleCurrency()">
+                    <i class="fa-solid fa-coins text-amber-300"></i>
+                    <span>Currency: <strong id="currencyLabel" class="underline">KSh (KES)</strong></span>
+                </div>
+                <a href="#" class="hover:underline">Sell on Kilimall</a>
+                <a href="#" class="hover:underline">Help Center</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-40 glass-header border-b border-slate-200 dark:border-slate-800 transition-colors">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16 sm:h-20 gap-2 md:gap-6">
+                
+                <!-- Kilimall Logo -->
+                <a href="#" class="flex items-center space-x-2 shrink-0">
+                    <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-kili-orange to-red-600 flex items-center justify-center text-white font-black text-xl shadow-lg shadow-kili-orange/30"
